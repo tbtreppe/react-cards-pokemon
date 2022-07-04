@@ -15,6 +15,7 @@ function useAxios(baseUrl) {
     formatter = (data) => data,
     restOfUrl = ""
   ) => {
+    console.log(formatter);
     const response = await axios.get(`${baseUrl}${restOfUrl}`);
     setResponses((data) => [...data, formatter(response.data)]);
   };
